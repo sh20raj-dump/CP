@@ -1,0 +1,1 @@
+{"name":"Local: adult-or-not","url":"/Users/shaswatraj/Desktop/DSA/cpp/adult-or-not.cpp","tests":[{"id":1759254070600,"input":"23","output":"Adult"},{"id":1759254086775,"input":"12","output":"Kid"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/shaswatraj/Desktop/DSA/cpp/adult-or-not.cpp","group":"local","local":true}
