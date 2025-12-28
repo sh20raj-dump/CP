@@ -7,15 +7,15 @@ class Stack {
 
 public:
   void push(int val) { 
-    ll.push_back(val);
+    ll.push_front(val);
   }
 
   void pop() { 
-    ll.pop_back();
+    ll.pop_front();
    };
 
   int top() {
-    return ll.back();
+    return ll.front();
    };
 
   bool isEmpty() { return ll.size() == 0; };
@@ -33,7 +33,7 @@ int main() {
     cout << s.top() << " ";
     s.pop();
   }
-  cout << endl;
+  cout << endl; // 1 13 
 
   return 0;
 }
