@@ -8,10 +8,7 @@ class Stack {
 public:
   void push(int val) { return v.push_back(val); };
 
-  int pop() {
-    v.pop_back();
-    return this->top();
-  };
+  void pop() { v.pop_back(); };
 
   int top() { return v.at(v.size() - 1); };
 
@@ -24,7 +21,7 @@ int main() {
   s.push(1);
   s.push(12);
   s.push(13);
-  
+
   while (!s.isEmpty()) {
     cout << s.top() << " ";
     s.pop();
