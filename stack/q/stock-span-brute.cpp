@@ -1,29 +1,37 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
+int main() {
 
-int main(){
+  vector<int> arr = {100, 80, 60, 70, 60, 75, 85};
+  vector<int> ss(arr.size());
 
-    int arr[] = {100,80,60,70,75,85};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    int ss[size];
+  for (int i = 0; i < arr.size(); i++) {
+    int s = 0;
 
-
-
-
-    int curr=0;
-
-    for(int i = 0; i < size; i++){
-        cout << i;
+    // calculate the ss
+    for (int j = i; j >= 0; j--) {
+        // cout << i << " -> " << " j = " << j << endl;
+      if (arr[j] <= arr[i]) {
+        s++;
+      } else {
+        break;
+      }
     }
 
+    
+    ss[i] = s;
+  }
 
+  for (int x : ss) {
+    cout << x << " ";
+  }
 
+  cout << endl;
 
+  // result = [1,1,1,2,1,4,6]
 
-
-    // result = [1,1,1,2,1,4,6]
-
-    return 0;
+  return 0;
 }
